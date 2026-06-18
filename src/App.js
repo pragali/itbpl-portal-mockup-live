@@ -323,10 +323,16 @@ export default function App() {
         </div>
       </footer>
 
-      <style jsx global>{`
+     {/* GLOBAL CSS INJECT FOR MARQUEE AND MOBILE BACKGROUND FIX */}
+     <style jsx="true" global="true">{`
         @keyframes marquee {
           0% { transform: translateX(0%); }
           100% { transform: translateX(-50%); }
+        }
+        body {
+          background-color: #121212 !important;
+          margin: 0;
+          padding: 0;
         }
       `}</style>
     </div>
