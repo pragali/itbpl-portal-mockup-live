@@ -88,7 +88,7 @@ export default function App() {
           <div className="space-y-4 md:space-y-6">
             <div className="border-b border-gray-800 pb-3 text-center md:text-left">
               <h1 className="text-base md:text-lg font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-white to-[#39FF14]">
-                ITBPL PORTAL
+                ITPL PORTAL
               </h1>
               <p className="text-[9px] text-gray-500 font-bold tracking-widest uppercase">Palnadu District League</p>
             </div>
@@ -419,7 +419,7 @@ export default function App() {
                   Congratulations Captain! **{formData.teamName}** is locked in for the upcoming season in the **{selectedDistrict?.name}** roster database.
                 </p>
                 <div className="bg-black/60 border border-gray-800 rounded-xl p-3 text-xs inline-block mx-auto text-left space-y-1">
-                  <p className="text-gray-400">🎫 Team ID: <strong className="text-[#39FF14]">ITBPL-2026-{Math.floor(1000 + Math.random() * 9000)}</strong></p>
+                  <p className="text-gray-400">🎫 Team ID: <strong className="text-[#39FF14]">ITPL-2026-{Math.floor(1000 + Math.random() * 9000)}</strong></p>
                   <p className="text-gray-400">👤 Captain: <span className="text-white font-medium">{formData.captainName}</span></p>
                 </div>
                 <button 
