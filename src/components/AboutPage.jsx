@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function AboutPage({ onRegisterClick }) {
   const coreCommittee = [
-    { name: "HARI Prasad", title: "PDCA President", file: "PDCA president -HARI Prasad.jpeg" },
-    { name: "Surya Prakash", title: "PDCA Vice President", file: "Surya Prakash - PDCA Vice President.jpeg" },
-    { name: "Bolla Suresh", title: "Legal Advisor", file: "Bolla Suresh- Legal advisor.jpeg" },
-    { name: "Praveen Gali", title: "Technical Head", file: "Praveen Gali - Technical Head.jpeg" }
+    { name: "HARI Prasad", title: "PDCA President", file: "hp.jpeg" },
+    { name: "Surya Prakash", title: "PDCA Vice President", file: "sp.jpeg" },
+    { name: "Bolla Suresh", title: "Legal Advisor", file: "bs.jpeg" },
+    { name: "Praveen Gali", title: "Technical Head", file: "pg.jpeg" }
   ];
 
   return (
@@ -109,14 +109,22 @@ export default function AboutPage({ onRegisterClick }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {coreCommittee.map((member, idx) => (
             <div key={idx} className="bg-[#1c1c1c] border border-gray-800 rounded-xl overflow-hidden flex flex-col">
-              {/* IMAGE HOUSING CONTAINER FOR RE-SHAPED MOCK RENDERS */}
-              <div className="w-full aspect-[3/4] bg-neutral-900 border-b border-gray-800 flex flex-col justify-center items-center text-center p-4 relative group">
-                <span className="text-4xl mb-2 opacity-30 group-hover:scale-110 transition-transform">👤</span>
-                <span className="text-[10px] font-mono text-gray-500 bg-black/60 px-2 py-1 rounded border border-gray-800 max-w-[90%] break-all">
-                  {member.file}
-                </span>
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2">
-                  <p className="text-[10px] text-gray-300 font-medium text-center">Place your asset in public folder matching this name perfectly.</p>
+              {/* IMAGE HOUSING CONTAINER */}
+              <div className="w-full aspect-[3/4] bg-neutral-900 border-b border-gray-800 relative group overflow-hidden flex items-center justify-center">
+                <img 
+                  src={`/${member.file}`} 
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'flex';
+                  }}
+                />
+                <div className="hidden absolute inset-0 flex-col justify-center items-center text-center p-4">
+                  <span className="text-4xl mb-2 opacity-30">👤</span>
+                  <span className="text-[10px] font-mono text-gray-500 bg-black/60 px-2 py-1 rounded border border-gray-800 max-w-[90%] break-all">
+                    {member.file}
+                  </span>
                 </div>
               </div>
               
