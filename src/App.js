@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import AboutPage from './components/AboutPage';
 
 // ==========================================
 // UPGRADED MOCK DATASET FOR MOBILE PREVIEW
@@ -133,9 +134,11 @@ export default function App() {
 
         {/* 3. MAIN WORKSPACE */}
         <main className="flex-1 p-4 md:p-8">
-          {activeTab !== 'North Zone' ? (
+          {activeTab === 'About' ? (
+            <AboutPage onRegisterClick={() => handleTabChange('North Zone')} />
+          ) : activeTab !== 'North Zone' ? (
             <div className="h-48 flex items-center justify-center border border-dashed border-gray-800 rounded-xl text-gray-500 font-bold text-xs uppercase tracking-wider text-center p-4">
-              Click on "North Zone" in the menu above to test the interactive mockup flow!
+              Click on "About" or "North Zone" in the menu above to test the interactive mockup flow!
             </div>
           ) : (
             <div className="space-y-6">
