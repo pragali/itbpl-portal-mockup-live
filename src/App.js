@@ -4,8 +4,7 @@ import React, { useState, useEffect } from 'react';
 // UPGRADED MOCK DATASET FOR MOBILE PREVIEW
 // ==========================================
 const titleSponsors = [
-  { name: "Mega Sports Corp", logo: "🏆 MEGA SPORTS", link: "#" },
-  { name: "NextGen Energy Drink", logo: "⚡ NEXTGEN ENERGY", link: "#" }
+  { name: "Hatrick sports Infra", logo: "🏆 HATRICK SPORTS INFRA", link: "#" }
 ];
 
 const associateSponsors = [
