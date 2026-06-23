@@ -33,7 +33,7 @@ const mockTeamsByDistrict = {
 };
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState('North Zone');
+  const [activeTab, setActiveTab] = useState('About');
   const [selectedDistrict, setSelectedDistrict] = useState(null);
   const [currentTitleIdx, setCurrentTitleIdx] = useState(0);
 
